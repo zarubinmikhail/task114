@@ -5,6 +5,7 @@ import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -12,7 +13,11 @@ public class UserServiceImpl implements UserService {
     UserDao userDaoJDBC = new UserDaoHibernateImpl();
 
     public void createUsersTable() {
-        userDaoJDBC.createUsersTable();
+        try {
+            userDaoJDBC.createUsersTable();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public void dropUsersTable() {
