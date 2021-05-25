@@ -64,34 +64,3 @@ public class Util {
 
     }
 }
-//Connection establishment for Hibernate пробы пера
-//   static {
-//        StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
-//        Map<String, String> dbSettings = new HashMap<>();
-//        dbSettings.put(Environment.URL, URL);
-//        dbSettings.put(Environment.USER, USERNAME);
-//        dbSettings.put(Environment.PASS, PASSWORD);
-//        dbSettings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-//        dbSettings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
-//        registryBuilder.applySettings(dbSettings);
-//        standardServiceRegistry = registryBuilder.build();
-//        MetadataSources sources = new MetadataSources(standardServiceRegistry);
-//        Metadata metadata = sources.getMetadataBuilder().build();
-//        sessionFactory = metadata.getSessionFactoryBuilder().build();
-//        Properties properties = new Properties();
-//        properties.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
-//        properties.setProperty("hibernate.connection.url", URL);
-//        properties.setProperty("hibernate.connection.username", USERNAME);
-//        properties.setProperty("hibernate.connection.password", PASSWORD);
-//        properties.setProperty("dialect", "org.hibernate.dialect.MySQLDialect");
-//       // properties.setProperty("hibernate.hbm2ddl.auto", "create");
-//
-//        Configuration configuration = new Configuration()
-//                .addProperties(properties);//.addAnnotatedClass(User.class);
-//        StandardServiceRegistryBuilder builder =
-//                new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
-//        sessionFactory = configuration.buildSessionFactory(builder.build());
-//    }
-//    public static SessionFactory getSessionFactory() {
-//        return sessionFactory;
-//    }
